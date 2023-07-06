@@ -46,7 +46,7 @@ let users = [
     },
 ]
 
-console.log(users[0].address.country);
+// console.log(users[0].address.country);
 
 let b: Array<number>
 b = []
