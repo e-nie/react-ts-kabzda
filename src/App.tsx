@@ -1,24 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./components/Accordion";
-import {Rating} from "./components/Rating";
-import OnOff from "./components/onOff/OnOff";
-import UncontrolledAccordion from "./components/UncontrolledAccordion";
+import {Rating, RatingValueType} from "./components/Rating";
 import {UncontrolledRating} from "./components/UncontrolledRating";
+import Accordion from "./components/Accordion";
+import OnOff from "./components/onOff/OnOff";
+import UncontrolledOnOff from "./components/UncontrolledonOff/UncontrolledOnOff";
+import UncontrolledAccordion from "./components/UncontrolledAccordion";
+
 
 function App() {
     console.log('App rendering');
+
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(3)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false)
+
     return (
         <div className = {'App'}>
-            <OnOff />
-            <UncontrolledAccordion titleValue = 'Menu' />
-            <Accordion titleValue='Menu' collapsed={false}/>
 
+            <Rating value = {ratingValue}
+                    onClick = {setRatingValue} />
             <UncontrolledRating />
-            <Rating value={4}/>
+
+            <Accordion titleValue = 'Menu'
+                       collapsed = {accordionCollapsed}
+                       onChange = {() => {
+                           setAccordionCollapsed(!accordionCollapsed)
+                       }} />
+
+            {/*<OnOff on = {switchOn} onChange = {(on) => {*/}
+            {/*    setSwitchOn(on)*/}
+            {/*}} />*/}
+
+            <UncontrolledOnOff onChange={setSwitchOn} /> {switchOn.toString()}
+
+            {/*<UncontrolledOnOff />*/}
+            <UncontrolledAccordion titleValue = 'blabla' />
+
+            {/*<UncontrolledRating />*/}
+
+
+            {/*<Rating value={4}/>*/}
             {/*<UncontrolledAccordion titleValue={'Users'} />*/}
-            {/*<OnOff />*/}
-            {/*<OnOff />*/}
+            {/*<UncontrolledOnOff />*/}
+            {/*<UncontrolledOnOff />*/}
             {/*<PageTitle title = {'This is App component'} />*/}
             {/*<PageTitle title = {'My friends'} />*/}
             {/*<Rating value={0}/>*/}
