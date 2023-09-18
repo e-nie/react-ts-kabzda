@@ -34,22 +34,8 @@ function App() {
 
             <UncontrolledOnOff onChange={setSwitchOn} /> {switchOn.toString()}
 
-            {/*<UncontrolledOnOff />*/}
+
             <UncontrolledAccordion titleValue = 'blabla' />
-
-            {/*<UncontrolledRating />*/}
-
-
-            {/*<Rating value={4}/>*/}
-            {/*<UncontrolledAccordion titleValue={'Users'} />*/}
-            {/*<UncontrolledOnOff />*/}
-            {/*<UncontrolledOnOff />*/}
-            {/*<PageTitle title = {'This is App component'} />*/}
-            {/*<PageTitle title = {'My friends'} />*/}
-            {/*<Rating value={0}/>*/}
-            {/*<Rating value={1}/>*/}
-            {/*<Rating value = {2} />*/}
-            {/*<Rating value={5}/>*/}
 
 
         </div>
