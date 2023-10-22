@@ -4,8 +4,8 @@ import {Rating, RatingValueType} from "./components/Rating";
 import {UncontrolledRating} from "./components/UncontrolledRating";
 import {Accordion} from "./components/Accordion";
 import {OnOff} from "./components/onOff/OnOff";
-import UncontrolledOnOff from "./components/UncontrolledonOff/UncontrolledOnOff";
-import UncontrolledAccordion from "./components/UncontrolledAccordion";
+import {UncontrolledOnOff} from "./components/UncontrolledonOff/UncontrolledOnOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
             <Rating value = {ratingValue}
                     onClick = {setRatingValue} />
-            <UncontrolledRating />
+            {/*<UncontrolledRating  onChange={}/>*/}
 
             <Accordion titleValue = 'Menu'
                        collapsed = {accordionCollapsed}
