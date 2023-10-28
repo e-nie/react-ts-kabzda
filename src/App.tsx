@@ -22,15 +22,15 @@ function App() {
                     onClick = {setRatingValue} />
             {/*<UncontrolledRating  onChange={}/>*/}
 
-            <Accordion titleValue = 'Menu'
-                       collapsed = {accordionCollapsed}
-                       onChange = {() => {
-                           setAccordionCollapsed(!accordionCollapsed)
-                       }} />
+            {/*<Accordion titleValue = 'Menu'*/}
+            {/*           collapsed = {accordionCollapsed}*/}
+            {/*           onChange = {() => {*/}
+            {/*               setAccordionCollapsed(!accordionCollapsed)*/}
+            {/*           }}   items={items}/>*/}
 
-            {/*<OnOff on = {switchOn} onChange = {(on) => {*/}
-            {/*    setSwitchOn(on)*/}
-            {/*}} />*/}
+            <OnOff on = {switchOn} onChange = {(on) => {
+                setSwitchOn(on)
+            }} />
 
             <UncontrolledOnOff onChange={setSwitchOn} /> {switchOn.toString()}
 
