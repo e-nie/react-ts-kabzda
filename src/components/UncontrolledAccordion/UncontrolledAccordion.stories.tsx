@@ -1,5 +1,5 @@
 
-import {Accordion} from './Accordion';
+import {Accordion} from '../Accordion/Accordion';
 import React from "react";
 import {UncontrolledAccordion} from "./UncontrolledAccordion";
 

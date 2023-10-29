@@ -1,5 +1,5 @@
 import React from "react";
-import star from "../star.png";
+import star from "../../star.png";
 
 export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
