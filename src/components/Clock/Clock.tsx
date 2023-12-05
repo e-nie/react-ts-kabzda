@@ -12,7 +12,7 @@ export const Clock: React.FC<Propstype> = (props) => {
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
-        debugger
+
         const intervalID = setInterval(() => {
             console.log('TiK');
             setDate(new Date())
